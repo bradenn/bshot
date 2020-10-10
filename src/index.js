@@ -8,7 +8,7 @@ async function start() {
     await loaders(app);
 
     const port = config.PORT;
-    app.listen(port, () => console.log(`Devshot started, listening on port ${port}.`));
+    app.listen(port, () => console.log(`bShot started, listening on port ${port}.`));
 }
 
 export default start();
