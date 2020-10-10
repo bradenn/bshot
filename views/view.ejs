@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-center">
+            <%- include('./partials/title') %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="image">
+            <input type="checkbox" id="zoomed">
+            <label for="zoomed">
+                <img src="/image/<%= image.uuid %>" alt="screenshot, sorry, not much more to say">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-center">
+            <h5>Captured <%= new Date(image.dateCreated).toLocaleString() %></h5>
+        </div>
+    </div>
+
+</div>
+</body>
+<%- include('./partials/footer') %>
+
+

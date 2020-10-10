@@ -1,0 +1,204 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    --mono-1: hsl(220, 14%, 71%);
+    --mono-2: hsl(220, 9%, 55%);
+    --mono-3: hsl(220, 10%, 40%);
+
+    --hue-1: hsl(187, 47%, 55%);
+    --hue-2: hsl(207, 82%, 66%);
+    --hue-3: hsl(286, 60%, 67%);
+    --hue-4: hsl(95, 38%, 62%);
+    --hue-5: hsl(355, 65%, 65%);
+    --hue-5-2: hsl(5, 48%, 51%);
+    --hue-6: hsl(29, 54%, 61%);
+    --hue-6-2: hsl(39, 67%, 69%);
+
+    --bg: hsl(220, 13%, 18%);
+    --dk: hsl(220, 13%, 16%);
+    --gd: hsl(220, 14%, 22%);
+    --fg: hsl(220, 14%, 71%);
+
+    --ac: hsl(220, 100%, 66%);
+
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+root {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    background-color: var(--bg) !important;
+    color: var(--fg) !important;
+}
+
+.col-center {
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    max-width: 1100px;
+
+}
+
+.line {
+    display: flex;
+
+    align-content: center;
+}
+
+
+
+.block {
+    width: 4px;
+    height: 2.75em;
+    background-color: var(--ac);
+    opacity: 0.75;
+    animation: flash 1s step-end infinite;
+    margin-left: 8px;
+}
+
+@keyframes flash {
+    50% {
+        opacity: 0;
+    }
+}
+
+.red {
+    color: var(--hue-5) !important;
+}
+
+.muted{
+    color: var(--mono-1);
+    font-family: 'Fira Code', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+h1 {
+    color: var(--hue-2);
+    font-size: 2.5em !important;
+    font-family: 'Fira Code', sans-serif;
+    font-weight: 500;
+    margin-top: 1vh;
+    line-height: 1.2;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+h2 {
+    margin-top: 1em !important;
+    color: var(--hue-6);
+    font-family: 'Fira Code', sans-serif;
+    font-size: 1.5em !important;
+    font-weight: 500;
+}
+
+.element{
+    margin-top: 24px;
+    margin-left: 1em;
+}
+
+.element > h3.desc{
+    color: var(--hue-5) !important;
+}
+.element > a{
+    display: block;
+    color: var(--hue-3) !important;
+    font-family: 'Fira Code', sans-serif;
+    font-size: 1.25em !important;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.element > h3 > a {
+    color: var(--hue-4);
+    font-family: 'Fira Code', sans-serif;
+    margin-bottom: 0;
+}
+
+.element > h3 {
+    color: var(--hue-4);
+    font-family: 'Fira Code', sans-serif;
+    font-size: 1.25em !important;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.element > span {
+    color: var(--mono-2);
+    font-family: 'Fira Code', sans-serif;
+    font-size: 1em !important;
+    font-weight: 400;
+}
+
+.element > div {
+    color: var(--mono-1);
+    font-family: 'Fira Code', sans-serif;
+    font-size: 1em !important;
+    font-weight: 400;
+}
+html {
+    background-color: var(--bg);
+}
+
+.container {
+    min-width: 50vw;
+}
+
+.row {
+    min-width: 50vw !important;
+}
+
+
+.image {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--dk);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ label > img {
+    transform: scale(1.5);
+    margin-top: 10vh;
+
+    cursor: zoom-out;
+}
+
+img {
+    transition: transform 0.25s ease, margin 0.25s ease-in-out;
+    cursor: zoom-in;
+    max-height: 50vh;
+    max-width: 90vw;
+    text-align: center;
+    border: 2px solid var(--mono-1);
+    box-shadow: 0 0 8px var(--gd);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0.1em;
+}
