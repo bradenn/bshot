@@ -1,6 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <% if(typeof image !== 'undefined') { %>
+        <!-- Primary Meta Tags -->
+        <title>bSnap</title>
+        <meta name="title" content="bSnap">
+        <meta name="description" content="Screenshots without bloat">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://b.bradenn.com/<%= image.uuid %>">
+        <meta property="og:title" content="bSnap">
+        <meta property="og:description" content="Screenshots without bloat">
+        <meta property="og:image" content="https://b.bradenn.com/image/<%= image.uuid %>">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://b.bradenn.com/<%= image.uuid %>">
+        <meta property="twitter:title" content="bSnap">
+        <meta property="twitter:description" content="Screenshots without bloat">
+        <meta property="twitter:image" content="https://b.bradenn.com/image/<%= image.uuid %>">
+    <% } %>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
